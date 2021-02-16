@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.grbPasscode = new System.Windows.Forms.GroupBox();
             this.cmdScanStart = new System.Windows.Forms.Button();
             this.cmdBackPass = new System.Windows.Forms.Button();
@@ -36,14 +37,6 @@
             this.lbPass = new System.Windows.Forms.Label();
             this.txtPasscode = new System.Windows.Forms.TextBox();
             this.grbHome = new System.Windows.Forms.GroupBox();
-            this.grScanner = new System.Windows.Forms.GroupBox();
-            this.cmdQRrun = new System.Windows.Forms.Button();
-            this.cmdQRstop = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cboDevice = new System.Windows.Forms.ComboBox();
-            this.txtQRdecode = new System.Windows.Forms.TextBox();
-            this.cmdQRback = new System.Windows.Forms.Button();
-            this.picQRscan = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.cmdSTOPsnd = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
@@ -61,6 +54,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.cmdLogOut = new System.Windows.Forms.Button();
+            this.grScanner = new System.Windows.Forms.GroupBox();
+            this.cmdQRrun = new System.Windows.Forms.Button();
+            this.cmdQRstop = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cboDevice = new System.Windows.Forms.ComboBox();
+            this.txtQRdecode = new System.Windows.Forms.TextBox();
+            this.cmdQRback = new System.Windows.Forms.Button();
+            this.picQRscan = new System.Windows.Forms.PictureBox();
             this.cmdExit = new System.Windows.Forms.Button();
             this.cmdPasscode = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -175,100 +176,6 @@
             this.grbHome.TabStop = false;
             this.grbHome.Text = "SecureApe";
             this.grbHome.Visible = false;
-            // 
-            // grScanner
-            // 
-            this.grScanner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.grScanner.Controls.Add(this.cmdQRrun);
-            this.grScanner.Controls.Add(this.cmdQRstop);
-            this.grScanner.Controls.Add(this.label9);
-            this.grScanner.Controls.Add(this.cboDevice);
-            this.grScanner.Controls.Add(this.txtQRdecode);
-            this.grScanner.Controls.Add(this.cmdQRback);
-            this.grScanner.Controls.Add(this.picQRscan);
-            this.grScanner.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grScanner.Location = new System.Drawing.Point(12, 5);
-            this.grScanner.Name = "grScanner";
-            this.grScanner.Size = new System.Drawing.Size(420, 412);
-            this.grScanner.TabIndex = 5;
-            this.grScanner.TabStop = false;
-            this.grScanner.Text = "Card Scanner";
-            this.grScanner.Visible = false;
-            // 
-            // cmdQRrun
-            // 
-            this.cmdQRrun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cmdQRrun.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmdQRrun.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdQRrun.Location = new System.Drawing.Point(327, 263);
-            this.cmdQRrun.Name = "cmdQRrun";
-            this.cmdQRrun.Size = new System.Drawing.Size(80, 36);
-            this.cmdQRrun.TabIndex = 9;
-            this.cmdQRrun.Text = "Start";
-            this.cmdQRrun.UseVisualStyleBackColor = false;
-            this.cmdQRrun.Click += new System.EventHandler(this.cmdQRrun_Click);
-            // 
-            // cmdQRstop
-            // 
-            this.cmdQRstop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cmdQRstop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmdQRstop.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdQRstop.Location = new System.Drawing.Point(327, 304);
-            this.cmdQRstop.Name = "cmdQRstop";
-            this.cmdQRstop.Size = new System.Drawing.Size(80, 36);
-            this.cmdQRstop.TabIndex = 8;
-            this.cmdQRstop.Text = "Stop";
-            this.cmdQRstop.UseVisualStyleBackColor = false;
-            this.cmdQRstop.Click += new System.EventHandler(this.cmdQRstop_Click);
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(11, 377);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 21);
-            this.label9.TabIndex = 5;
-            this.label9.Text = "Cam -";
-            // 
-            // cboDevice
-            // 
-            this.cboDevice.FormattingEnabled = true;
-            this.cboDevice.Location = new System.Drawing.Point(76, 374);
-            this.cboDevice.Name = "cboDevice";
-            this.cboDevice.Size = new System.Drawing.Size(206, 24);
-            this.cboDevice.TabIndex = 7;
-            // 
-            // txtQRdecode
-            // 
-            this.txtQRdecode.Location = new System.Drawing.Point(314, 27);
-            this.txtQRdecode.Name = "txtQRdecode";
-            this.txtQRdecode.Size = new System.Drawing.Size(100, 23);
-            this.txtQRdecode.TabIndex = 6;
-            this.txtQRdecode.Visible = false;
-            // 
-            // cmdQRback
-            // 
-            this.cmdQRback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cmdQRback.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmdQRback.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdQRback.Location = new System.Drawing.Point(327, 364);
-            this.cmdQRback.Name = "cmdQRback";
-            this.cmdQRback.Size = new System.Drawing.Size(80, 36);
-            this.cmdQRback.TabIndex = 5;
-            this.cmdQRback.Text = "Back";
-            this.cmdQRback.UseVisualStyleBackColor = false;
-            this.cmdQRback.Click += new System.EventHandler(this.cmdQRback_Click);
-            // 
-            // picQRscan
-            // 
-            this.picQRscan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picQRscan.Location = new System.Drawing.Point(6, 27);
-            this.picQRscan.Name = "picQRscan";
-            this.picQRscan.Size = new System.Drawing.Size(300, 313);
-            this.picQRscan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picQRscan.TabIndex = 0;
-            this.picQRscan.TabStop = false;
             // 
             // label8
             // 
@@ -466,6 +373,100 @@
             this.cmdLogOut.UseVisualStyleBackColor = false;
             this.cmdLogOut.Click += new System.EventHandler(this.cmdLogOut_Click);
             // 
+            // grScanner
+            // 
+            this.grScanner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.grScanner.Controls.Add(this.cmdQRrun);
+            this.grScanner.Controls.Add(this.cmdQRstop);
+            this.grScanner.Controls.Add(this.label9);
+            this.grScanner.Controls.Add(this.cboDevice);
+            this.grScanner.Controls.Add(this.txtQRdecode);
+            this.grScanner.Controls.Add(this.cmdQRback);
+            this.grScanner.Controls.Add(this.picQRscan);
+            this.grScanner.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grScanner.Location = new System.Drawing.Point(12, 5);
+            this.grScanner.Name = "grScanner";
+            this.grScanner.Size = new System.Drawing.Size(420, 412);
+            this.grScanner.TabIndex = 5;
+            this.grScanner.TabStop = false;
+            this.grScanner.Text = "Card Scanner";
+            this.grScanner.Visible = false;
+            // 
+            // cmdQRrun
+            // 
+            this.cmdQRrun.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cmdQRrun.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmdQRrun.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdQRrun.Location = new System.Drawing.Point(327, 263);
+            this.cmdQRrun.Name = "cmdQRrun";
+            this.cmdQRrun.Size = new System.Drawing.Size(80, 36);
+            this.cmdQRrun.TabIndex = 9;
+            this.cmdQRrun.Text = "Start";
+            this.cmdQRrun.UseVisualStyleBackColor = false;
+            this.cmdQRrun.Click += new System.EventHandler(this.cmdQRrun_Click);
+            // 
+            // cmdQRstop
+            // 
+            this.cmdQRstop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cmdQRstop.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmdQRstop.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdQRstop.Location = new System.Drawing.Point(327, 304);
+            this.cmdQRstop.Name = "cmdQRstop";
+            this.cmdQRstop.Size = new System.Drawing.Size(80, 36);
+            this.cmdQRstop.TabIndex = 8;
+            this.cmdQRstop.Text = "Stop";
+            this.cmdQRstop.UseVisualStyleBackColor = false;
+            this.cmdQRstop.Click += new System.EventHandler(this.cmdQRstop_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(11, 377);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(59, 21);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "Cam -";
+            // 
+            // cboDevice
+            // 
+            this.cboDevice.FormattingEnabled = true;
+            this.cboDevice.Location = new System.Drawing.Point(76, 374);
+            this.cboDevice.Name = "cboDevice";
+            this.cboDevice.Size = new System.Drawing.Size(206, 24);
+            this.cboDevice.TabIndex = 7;
+            // 
+            // txtQRdecode
+            // 
+            this.txtQRdecode.Location = new System.Drawing.Point(314, 27);
+            this.txtQRdecode.Name = "txtQRdecode";
+            this.txtQRdecode.Size = new System.Drawing.Size(100, 23);
+            this.txtQRdecode.TabIndex = 6;
+            this.txtQRdecode.Visible = false;
+            // 
+            // cmdQRback
+            // 
+            this.cmdQRback.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cmdQRback.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmdQRback.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdQRback.Location = new System.Drawing.Point(327, 364);
+            this.cmdQRback.Name = "cmdQRback";
+            this.cmdQRback.Size = new System.Drawing.Size(80, 36);
+            this.cmdQRback.TabIndex = 5;
+            this.cmdQRback.Text = "Back";
+            this.cmdQRback.UseVisualStyleBackColor = false;
+            this.cmdQRback.Click += new System.EventHandler(this.cmdQRback_Click);
+            // 
+            // picQRscan
+            // 
+            this.picQRscan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picQRscan.Location = new System.Drawing.Point(6, 27);
+            this.picQRscan.Name = "picQRscan";
+            this.picQRscan.Size = new System.Drawing.Size(300, 313);
+            this.picQRscan.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picQRscan.TabIndex = 0;
+            this.picQRscan.TabStop = false;
+            // 
             // cmdExit
             // 
             this.cmdExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -519,6 +520,7 @@
             this.Controls.Add(this.grbPasscode);
             this.Controls.Add(this.cmdPasscode);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximumSize = new System.Drawing.Size(516, 497);
             this.MinimumSize = new System.Drawing.Size(516, 497);
             this.Name = "Form1";
